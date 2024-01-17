@@ -1,6 +1,8 @@
 import '@/app/ui/global.css';
 import { inter } from '@/app/ui/fonts';
 import { Metadata } from 'next';
+import Head from 'next/head';
+
 
 export const metadata: Metadata = {
   title: {
@@ -17,6 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        {/* Include the meta tag here */}
+        <meta name="google-site-verification" content="-GsOjATdw51ONR2Wfwq0t0dmx0NM6MxjpR6f1yRiVZ4" />
+      </Head>
       <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
